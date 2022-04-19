@@ -125,3 +125,66 @@ plot_images([
     (img_orig, 'Original Image'),
     (img, 'Undistorted Image')
 ])
+
+###############Perspective Transformation
+img_dimensions = (720, 1280)
+def modify_img(img, vertices):
+    vertices = np.array(vertices, ndmin=3, dtype=np.int32)
+    if len(img.shape) == 3:
+        fill_color = (255,) * 3
+    else:
+        fill_color = 255         
+    mask = np.zeros_like(img)
+    mask = cv2.fillPoly(mask, vertices, fill_color)
+    return cv2.bitwise_and(img, mask)
+    
+def wrap_img(img, warp_shape, src, dst):
+    M = cv2.getPerspectiveTransform(src, dst)
+    invM = cv2.getPerspectiveTransform(dst, src)
+    warped = cv2.warpPerspective(img, M, warp_shape, flags=cv2.INTER_LINEAR)
+    return warped, M, invM
+
+def preprocess_image(img, visualise=False):
+    ysize = img.shape[0]
+    xsize = img.shape[1]
+    undist = undistort(img, mtx, dist)
+    src = np.float32([
+        (696,455),    
+        (587,455), 
+        (235,700),  
+        (1075,700)
+    ])
+    dst = np.float32([
+        (xsize - 350, 0),
+        (350, 0),
+        (350, ysize),
+        (xsize - 350, ysize)
+    ])
+    warped, M, invM = wrap_img(undist, (xsize, ysize), src, dst)
+    vertices = np.array([
+        [200, ysize],
+        [200, 0],
+        [1100, 0],
+        [1100, ysize]
+    ])
+    roi = modify_img(warped, vertices)
+    if visualise:
+        img_copy = np.copy(img)
+        roi_copy = np.copy(roi)
+        
+        cv2.polylines(img_copy, [np.int32(src)], True, (255, 0, 0), 3)
+        cv2.polylines(roi_copy, [np.int32(dst)], True, (255, 0, 0), 3)
+        
+        plot_images([
+            (img_copy, 'Original Image'),
+            (roi_copy, 'Bird\'s Eye View')
+        ])
+    return roi, (M, invM)
+
+def get_image(img_path, visualise=False):
+    img = mpimg.imread(img_path)
+    return preprocess_image(img, visualise=visualise)
+
+#plotting test imgs
+for path in test_img_paths[:]:
+    get_image(path, visualise=True)
