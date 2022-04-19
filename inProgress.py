@@ -128,6 +128,7 @@ plot_images([
 
 ###############Perspective Transformation
 img_dimensions = (720, 1280)
+#crop unwanted parts of img by setting intensty=0
 def modify_img(img, vertices):
     vertices = np.array(vertices, ndmin=3, dtype=np.int32)
     if len(img.shape) == 3:
@@ -137,13 +138,15 @@ def modify_img(img, vertices):
     mask = np.zeros_like(img)
     mask = cv2.fillPoly(mask, vertices, fill_color)
     return cv2.bitwise_and(img, mask)
-    
+
+#wrap the img (convert to bird's eye view)
 def wrap_img(img, warp_shape, src, dst):
     M = cv2.getPerspectiveTransform(src, dst)
     invM = cv2.getPerspectiveTransform(dst, src)
     warped = cv2.warpPerspective(img, M, warp_shape, flags=cv2.INTER_LINEAR)
     return warped, M, invM
 
+#prepare img (correct the distortion,convert to bird's eye view,crop unwanted parts)
 def preprocess_image(img, visualise=False):
     ysize = img.shape[0]
     xsize = img.shape[1]
