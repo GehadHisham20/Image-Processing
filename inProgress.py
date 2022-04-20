@@ -876,3 +876,10 @@ def pipeline(img,mode,visualise=False, diagnostics=False):
     except Exception as e:
         print(e)
         return img
+    #--------------Demo of pipeline---------------
+if 8 in plot_demo:
+    cache = np.array([])
+    attempts = 0
+    reset = True
+    result = pipeline(mpimg.imread(test_img_paths[4]),'d', visualise=True, diagnostics=1)
+    result = pipeline(mpimg.imread(test_img_paths[4]),'r', visualise=True, diagnostics=1)
