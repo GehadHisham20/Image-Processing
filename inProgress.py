@@ -311,4 +311,4 @@ def BinaryImage(img, visualise=False):
 #output demo
 for img_path in test_img_paths[:2]:
         img, _ = get_image(img_path)
-        get_binary_image(img, visualise=True)
+        BinaryImage(img, visualise=True)
