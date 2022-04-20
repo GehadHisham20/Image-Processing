@@ -17,7 +17,7 @@ def chunk(x):
         return int(x)
     except:
         return x
-     
+#string ==> string + int     
 def sort_key(s):
     return [chunk(c) for c in re.split('([0-9]+)', s)]
 
