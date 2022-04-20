@@ -59,7 +59,8 @@ def plot_images(data, layout='row', cols=2, figsize=(20, 12)):
                 counter += 1
 
     return ax
-  
+   plot_demo = [1, 2, 3, 4, 5, 6, 7, 8]
+  #fn calibrate actually runs once just to calibrate the camera 
   def calibrate_camera():
     
     imgpaths = glob.glob('camera_cal/calibration*.jpg')
@@ -92,6 +93,7 @@ def plot_images(data, layout='row', cols=2, figsize=(20, 12)):
     ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, imshape[::-1], None, None)
     cv2.destroyAllWindows()
     return mtx, dist
+#the calibration process only needs to be run once in the absense of the pickled file
 if os.path.exists('camera_calib.p'):
     with open('camera_calib.p', mode='rb') as f:
         data = pickle.load(f)
@@ -108,23 +110,23 @@ def undistort(img, mtx, dist):
     undistort = cv2.undistort(img, mtx, dist, None, mtx)
     return undistort
   
- 
+ if 1 in plot_demo:
 
-ccimg = cv2.imread('camera_cal/calibration1.jpg')
-ccimg_undist = undistort(ccimg, mtx, dist)
+    ccimg = cv2.imread('camera_cal/calibration1.jpg')
+    ccimg_undist = undistort(ccimg, mtx, dist)
 
-plot_images([
-    (ccimg, 'Original Image'),
-    (ccimg_undist, 'Undistorted Image')
-])
+    plot_images([
+        (ccimg, 'Original Image'),
+        (ccimg_undist, 'Undistorted Image')
+    ])
 
-img_orig = mpimg.imread(test_img_paths[6])
-img = undistort(img_orig, mtx, dist)
+    img_orig = mpimg.imread(test_img_paths[6])
+    img = undistort(img_orig, mtx, dist)
 
-plot_images([
-    (img_orig, 'Original Image'),
-    (img, 'Undistorted Image')
-])
+    plot_images([
+        (img_orig, 'Original Image'),
+        (img, 'Undistorted Image')
+    ])
 
 ###############Perspective Transformation
 img_dimensions = (720, 1280)
