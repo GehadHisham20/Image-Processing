@@ -312,3 +312,188 @@ def BinaryImage(img, visualise=False):
 for img_path in test_img_paths[:2]:
         img, _ = get_image(img_path)
         BinaryImage(img, visualise=True)
+#-------------------------------Detection of lane lines-------------------------
+def get_poly_points(left_fit, right_fit):
+    ysize, xsize = IMG_SHAPE
+    
+    plot_y = np.linspace(0, ysize-1, ysize)
+    plot_xleft = left_fit[0] * plot_y**2 + left_fit[1] * plot_y + left_fit[2]
+    plot_xright = right_fit[0] * plot_y**2 + right_fit[1] * plot_y + right_fit[2]
+    
+    plot_xleft = plot_xleft[(plot_xleft >= 0) & (plot_xleft <= xsize - 1)]
+    plot_xright = plot_xright[(plot_xright >= 0) & (plot_xright <= xsize - 1)]
+    plot_yleft = np.linspace(ysize - len(plot_xleft), ysize - 1, len(plot_xleft))
+    plot_yright = np.linspace(ysize - len(plot_xright), ysize - 1, len(plot_xright))
+    
+    return plot_xleft.astype(np.int), plot_yleft.astype(np.int), plot_xright.astype(np.int), plot_yright.astype(np.int)
+
+def check_validity(left_fit, right_fit, diagnostics=False):
+    if left_fit is None or right_fit is None:
+        return False
+    
+    plot_xleft, plot_yleft, plot_xright, plot_yright = get_poly_points(left_fit, right_fit)
+
+    y1 = IMG_SHAPE[0] - 1 # Bottom
+    y2 = IMG_SHAPE[0] - int(min(len(plot_yleft), len(plot_yright)) * 0.35) 
+    y3 = IMG_SHAPE[0] - int(min(len(plot_yleft), len(plot_yright)) * 0.75)
+
+    x1l = left_fit[0]  * (y1**2) + left_fit[1]  * y1 + left_fit[2]
+    x2l = left_fit[0]  * (y2**2) + left_fit[1]  * y2 + left_fit[2]
+    x3l = left_fit[0]  * (y3**2) + left_fit[1]  * y3 + left_fit[2]
+
+    x1r = right_fit[0] * (y1**2) + right_fit[1] * y1 + right_fit[2]
+    x2r = right_fit[0] * (y2**2) + right_fit[1] * y2 + right_fit[2]
+    x3r = right_fit[0] * (y3**2) + right_fit[1] * y3 + right_fit[2]
+
+    x1_diff = abs(x1l - x1r)
+    x2_diff = abs(x2l - x2r)
+    x3_diff = abs(x3l - x3r)
+
+    min_dist_y1 = 480 
+    max_dist_y1 = 730 
+    min_dist_y2 = 280
+    max_dist_y2 = 730 
+    min_dist_y3 = 140
+    max_dist_y3 = 730 
+
+    if (x1_diff < min_dist_y1) | (x1_diff > max_dist_y1) | \
+        (x2_diff < min_dist_y2) | (x2_diff > max_dist_y2) | \
+        (x3_diff < min_dist_y3) | (x3_diff > max_dist_y3):
+        if diagnostics:
+            print("Violated distance criterion: " +
+                  "x1_diff == {:.2f}, x2_diff == {:.2f}, x3_diff == {:.2f}".format(x1_diff, x2_diff, x3_diff))
+        return False
+    
+    y1left_dx  = 2 * left_fit[0]  * y1 + left_fit[1]
+    y3left_dx  = 2 * left_fit[0]  * y3 + left_fit[1]
+    y1right_dx = 2 * right_fit[0] * y1 + right_fit[1]
+    y3right_dx = 2 * right_fit[0] * y3 + right_fit[1]
+
+    norm1 = abs(y1left_dx - y1right_dx)
+    norm2 = abs(y3left_dx - y3right_dx)
+
+    thresh = 0.6
+    if (norm1 >= thresh) | (norm2 >= thresh):
+        if diagnostics:
+            print("Violated tangent criterion: " +
+                  "norm1 == {:.3f}, norm2 == {:.3f} (thresh == {}).".format(norm1, norm2, thresh))
+            return False
+    
+    return True
+
+def polyfit_sliding_window(binary, lane_width_px=578, visualise=False, diagnostics=False):
+    global cache
+    ret = True
+
+    if binary.max() <= 0:
+        return False, np.array([]), np.array([]), np.array([])
+
+    histogram = None
+    cutoffs = [int(binary.shape[0] / 2), 0]
+    
+    for cutoff in cutoffs:
+        histogram = np.sum(binary[cutoff:, :], axis=0)
+        
+        if histogram.max() > 0:
+            break
+
+    if histogram.max() == 0:
+        print('Error! Unable to detect lane lines in this frame')
+        return False, np.array([]), np.array([])
+    
+    midpoint = np.int(histogram.shape[0] / 2)
+    leftx_base = np.argmax(histogram[:midpoint])
+    rightx_base = np.argmax(histogram[midpoint:]) + midpoint
+    
+    if visualise:
+        plot_images([(binary, 'Binary')])
+        plt.plot(histogram, 'm', linewidth=4.0)
+        plt.plot((midpoint, midpoint), (0, IMG_SHAPE[0]), 'c')
+        plt.plot((0, IMG_SHAPE[1]), (cutoff, cutoff), 'c')
+
+    out = np.dstack((binary, binary, binary)) * 255
+
+    nb_windows = 12
+    margin = 100 
+    minpix = 50
+    window_height = int(IMG_SHAPE[0] / nb_windows)
+    min_lane_pts = 10
+    
+    nonzero = binary.nonzero()
+    nonzerox = np.array(nonzero[1])
+    nonzeroy = np.array(nonzero[0])
+
+    leftx_current = leftx_base
+    rightx_current = rightx_base
+
+    left_lane_inds = []
+    right_lane_inds = []
+
+    for window in range(nb_windows):
+        win_y_low = IMG_SHAPE[0] - (1 + window) * window_height
+        win_y_high = IMG_SHAPE[0] - window * window_height
+
+        win_xleft_low = leftx_current - margin
+        win_xleft_high = leftx_current + margin
+
+        win_xright_low = rightx_current - margin
+        win_xright_high = rightx_current + margin
+
+        cv2.rectangle(out, (win_xleft_low, win_y_low), (win_xleft_high, win_y_high),\
+                      (0, 255, 0), 2)
+        cv2.rectangle(out, (win_xright_low, win_y_low), (win_xright_high, win_y_high),\
+                      (0, 255, 0), 2)
+
+        good_left_inds = ((nonzeroy >= win_y_low) & (nonzeroy <= win_y_high)
+                         & (nonzerox >= win_xleft_low) & (nonzerox <= win_xleft_high)).nonzero()[0]
+        good_right_inds = ((nonzeroy >= win_y_low) & (nonzeroy <= win_y_high)
+                         & (nonzerox >= win_xright_low) & (nonzerox <= win_xright_high)).nonzero()[0]
+
+        left_lane_inds.append(good_left_inds)
+        right_lane_inds.append(good_right_inds)
+
+        if len(good_left_inds) >  minpix:
+            leftx_current = int(np.mean(nonzerox[good_left_inds]))
+
+        if len(good_right_inds) > minpix:
+            rightx_current = int(np.mean(nonzerox[good_right_inds]))
+
+    left_lane_inds = np.concatenate(left_lane_inds)
+    right_lane_inds = np.concatenate(right_lane_inds)
+
+    leftx = nonzerox[left_lane_inds]
+    lefty = nonzeroy[left_lane_inds]
+    rightx = nonzerox[right_lane_inds]
+    righty = nonzeroy[right_lane_inds]
+    
+    left_fit, right_fit = None, None
+    
+    if len(leftx) >= min_lane_pts and len(rightx) >= min_lane_pts:
+        left_fit = np.polyfit(lefty, leftx, 2)
+        right_fit = np.polyfit(righty, rightx, 2)
+    
+    valid = check_validity(left_fit, right_fit, diagnostics=diagnostics)
+   
+    if not valid:
+      
+        if len(cache) == 0:
+            if diagnostics: print('WARNING: Unable to detect lane lines in this frame.')
+            return False, np.array([]), np.array([])
+        
+        avg_params = np.mean(cache, axis=0)
+        left_fit, right_fit = avg_params[0], avg_params[1]
+        ret = False
+        
+    plot_xleft, plot_yleft, plot_xright, plot_yright = get_poly_points(left_fit, right_fit)
+    out[nonzeroy[left_lane_inds], nonzerox[left_lane_inds]] = [255, 0, 0]
+    out[nonzeroy[right_lane_inds], nonzerox[right_lane_inds]] = [255, 10, 255]
+
+    left_poly_pts = np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])
+    right_poly_pts = np.array([np.transpose(np.vstack([plot_xright, plot_yright]))])
+
+    cv2.polylines(out, np.int32([left_poly_pts]), isClosed=False, color=(200,255,155), thickness=4)
+    cv2.polylines(out, np.int32([right_poly_pts]), isClosed=False, color=(200,255,155), thickness=4)
+
+    if visualise:
+        plot_images([(img, 'Original'), (out, 'Out')], figsize=(30, 40))  
+    return ret, out, np.array([left_fit, right_fit])
