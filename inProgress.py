@@ -743,3 +743,88 @@ y_mppx = (y_mppx1 + y_mppx2) / 2
 
 print('The avgerage meter/px (x-axis): {:.4f}'.format(x_mppx))
 print('The avgerage meter/px (y-axis): {:.4f}'.format(y_mppx))
+
+#--------------------Curvature---------------
+def compute_offset_from_center(poly_param, x_mppx):
+    plot_xleft, plot_yleft, plot_xright, plot_yright = get_poly_points(poly_param[0], poly_param[1])
+    
+    lane_center = (plot_xright[-1] + plot_xleft[-1]) / 2
+    car_center = IMG_SHAPE[1] / 2
+    
+    offset = (lane_center - car_center) * x_mppx
+    return offset
+
+def compute_curvature(poly_param, y_mppx, x_mppx):
+    plot_xleft, plot_yleft, plot_xright, plot_yright = get_poly_points(poly_param[0], poly_param[1])
+    
+    y_eval = np.max(plot_yleft)
+
+    left_fit_cr = np.polyfit(plot_yleft * y_mppx, plot_xleft * x_mppx, 2)
+    right_fit_cr = np.polyfit(plot_yright * y_mppx, plot_xright * x_mppx, 2)
+    
+    left_curverad = ((1 + (2*left_fit_cr[0]* y_eval*y_mppx + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
+    right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*y_mppx + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
+    
+    return left_curverad, right_curverad
+
+def draw(img, warped, invM, poly_param, curve_rad, offset):
+    undist = undistort(img, mtx, dist)
+    warp_zero = np.zeros_like(warped[:,:,0]).astype(np.uint8)
+    color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
+    
+    left_fit = poly_param[0]
+    right_fit = poly_param[1]
+    plot_xleft, plot_yleft, plot_xright, plot_yright = get_poly_points(left_fit, right_fit)
+    
+    pts_left = np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])
+    pts_right = np.array([np.flipud(np.transpose(np.vstack([plot_xright, plot_yright])))])
+    pts = np.hstack((pts_left, pts_right))
+
+    cv2.fillPoly(color_warp, np.int_([pts]), (0, 220, 110))
+                    
+    cv2.polylines(color_warp, np.int32([pts_left]), isClosed=False,
+                  color=(255, 255, 255), thickness=10)
+    cv2.polylines(color_warp, np.int32([pts_right]), isClosed=False,
+                  color=(255, 255, 255), thickness= 10)
+    
+    unwarped = cv2.warpPerspective(color_warp, invM, (img.shape[1], img.shape[0]), flags=cv2.INTER_LINEAR)
+    out = cv2.addWeighted(undist, 1, unwarped, 0.4, 0)
+    
+    if (left_fit[1] + right_fit[1]) / 2 > 0.05:
+        text = 'Left turn with Curve Radius: {:04.2f}m'.format(curve_rad)
+    elif (left_fit[1] + right_fit[1]) / 2 < -0.05:
+        text = 'Right turn with Curve Radius: {:04.2f}m'.format(curve_rad)
+    else:
+        text = 'Straight Way'
+    
+    cv2.putText(out, text, (50, 60), cv2.FONT_HERSHEY_DUPLEX, 1.2, (0, 0, 255), 2, cv2.LINE_AA)
+    
+    direction = ''
+    if offset > 0:
+        direction = 'left'
+    elif offset < 0:
+        direction = 'right'
+    
+    text = '{:0.1f}cm {} from center'.format(abs(offset) * 100, direction)
+    cv2.putText(out, text, (50, 110), cv2.FONT_HERSHEY_DUPLEX, 1.2, (0, 0, 255), 2, cv2.LINE_AA)
+    
+    return out
+
+#---------Curvature computation op--------------
+if 7 in plot_demo:
+    cache = np.array([])
+    
+    %matplotlib inline
+    for img_path in test_img_paths[3:6]:
+        img = mpimg.imread(img_path)
+        warped, (M, invM) = get_image(img_path)
+        
+        binary = BinaryImage(warped)
+        ret, img_poly, poly_param = polyfit_sliding_window(binary)
+        
+        left_curverad, right_curverad = compute_curvature(poly_param, y_mppx, x_mppx)
+        curvature = (left_curverad + right_curverad) / 2
+        offset = compute_offset_from_center(poly_param, x_mppx)
+        result = draw(img, warped, invM, poly_param, curvature, offset)
+        
+        plot_images([(img_poly, 'Polyfit'), (result, 'Result')])
