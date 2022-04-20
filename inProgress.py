@@ -25,7 +25,7 @@ def sort_fn(l):
 def plot_images(data, layout='row', cols=2, figsize=(20, 12)):
   
     rows = math.ceil(len(data) / cols)
-    f, ax = plt.subplots(figsize=figsize)
+     ax = plt.subplots(figsize=figsize)
     if layout == 'row':
         for idx, d in enumerate(data):
             img, title = d
