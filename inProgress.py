@@ -828,3 +828,51 @@ if 7 in plot_demo:
         result = draw(img, warped, invM, poly_param, curvature, offset)
         
         plot_images([(img_poly, 'Polyfit'), (result, 'Result')])
+  #---------------- Pipeline-----------------
+def pipeline(img,mode,visualise=False, diagnostics=False):
+    global cache
+    global poly_param 
+    global attempts
+    global reset
+    max_attempts = 5
+    result = np.copy(img)
+    warped, (M, invM) = preprocess_image(img)
+    try:
+        if reset == True:
+            binary = BinaryImage(warped)
+            ret, img_poly, poly_param = polyfit_sliding_window(binary, diagnostics=diagnostics)
+            if ret:
+                reset = False
+                cache = np.array([poly_param])
+            else:
+                if len(img_poly) == 0:
+                    print('Sliding window failed!')
+                    return img
+                
+        else:
+            img_poly, poly_param = polyfit_adapt_search(warped, poly_param, diagnostics=diagnostics)
+            if attempts == max_attempts:
+                if diagnostics: print('Resetting...')
+                reset = True
+                attempts = 0
+        
+        left_curverad, right_curverad = compute_curvature(poly_param, y_mppx, x_mppx)
+        offset = compute_offset_from_center(poly_param, x_mppx)
+        result = draw(img, warped, invM, poly_param, (left_curverad + right_curverad) / 2, offset)
+        blended_warped_poly = cv2.addWeighted(img_poly, 0.6, warped, 1, 0)
+        
+        if visualise:
+            if mode=='d': #for debug
+                ret2 = np.hstack([img_poly, blended_warped_poly])
+                ret3 = np.hstack([result, warped])
+                ret3 = np.vstack([ret3, ret2])
+                plt.figure(figsize=(20, 12))
+                plt.imshow(ret3)
+            elif mode=='r': #for run
+                ret3 = result
+                plt.figure(figsize=(20, 12))
+                plt.imshow(ret3)
+        return ret3
+    except Exception as e:
+        print(e)
+        return img
