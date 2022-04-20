@@ -19,11 +19,9 @@ def chunk(x):
         return x
      
 def sort_key(s):
-   
     return [chunk(c) for c in re.split('([0-9]+)', s)]
 
 def sort_fn(l):
-   
     l.sort(key= sort_key)
     
 def plot_images(data, layout='row', cols=2, figsize=(20, 12)):
