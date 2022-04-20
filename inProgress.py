@@ -506,3 +506,186 @@ def polyfit_sliding_window(binary, lane_width_px=578, visualise=False, diagnosti
         img, _ = get_image(img_path)
         binary = BinaryImage(img, visualise=False)
         polyfit_sliding_window(binary, visualise=True)
+        
+        
+        #--------------------Adaptive search --------------------------
+def polyfit_adapt_search(img, prev_poly_param, visualise=False, diagnostics=False):
+    global cache 
+    global attempts
+    
+    assert(len(img.shape) == 3)
+
+    nb_windows = 10
+    bin_margin = 80
+    margin = 60
+    window_height = int(img.shape[0] / nb_windows)
+    smoothing_window = 5
+    min_lane_pts = 10
+    
+    binary = np.zeros_like(img[:,:,0]) 
+    img_plot = np.copy(img)
+        
+    left_fit, right_fit = prev_poly_param[0], prev_poly_param[1]
+    plot_xleft, plot_yleft, plot_xright, plot_yright = get_poly_points(left_fit, right_fit)
+    
+    leftx_current = np.int(plot_xleft[-1])
+    rightx_current = np.int(plot_xright[-1])
+    
+    for window in range(nb_windows):
+        win_y_low = IMG_SHAPE[0] - (window + 1) * window_height
+        win_y_high = IMG_SHAPE[0] - window * window_height
+        win_xleft_low = min(max(0, leftx_current - bin_margin), 1280)
+        win_xleft_high = min(max(0, leftx_current + bin_margin), 1280)
+        win_xright_low = min(max(0, rightx_current - bin_margin), 1280)
+        win_xright_high = min(max(0, rightx_current + bin_margin), 1280)
+
+        img_win_left = img[win_y_low:win_y_high, win_xleft_low:win_xleft_high,:]
+        binary[win_y_low:win_y_high, win_xleft_low:win_xleft_high] = \
+            BinaryImage(img_win_left, visualise=False)
+
+        img_win_right = img[win_y_low:win_y_high, win_xright_low:win_xright_high, :]
+        binary[win_y_low:win_y_high, win_xright_low:win_xright_high] = \
+            BinaryImage(img_win_right, visualise=False)
+
+        idxs = np.where(plot_yleft == win_y_low)[0]
+        if len(idxs) != 0:
+            leftx_current = int(plot_xleft[idxs[0]])
+            
+        idxs = np.where(plot_yright == win_y_low)[0]
+        if len(idxs) != 0:
+            rightx_current = int(plot_xright[idxs[0]])
+
+        if visualise:
+            left_pts = np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])
+            right_pts = np.array([np.transpose(np.vstack([plot_xright, plot_yright]))])
+            
+            cv2.polylines(img_plot, np.int32([left_pts]), isClosed=False, color=(255, 20, 147), thickness=4)
+            cv2.polylines(img_plot, np.int32([right_pts]), isClosed=False, color=(255, 20, 147), thickness=4)    
+            
+            bin_win_left = binary[win_y_low:win_y_high, win_xleft_low:win_xleft_high]
+            bin_win_left = np.dstack((bin_win_left, np.zeros_like(bin_win_left), np.zeros_like(bin_win_left))) * 255
+
+            bin_win_right = binary[win_y_low:win_y_high, win_xright_low:win_xright_high]
+            bin_win_right = np.dstack([np.zeros_like(bin_win_right), np.zeros_like(bin_win_right), bin_win_right]) * 255
+            
+            win_left = cv2.addWeighted(bin_win_left, 0.5, img_win_left, 0.7, 0)
+            win_right = cv2.addWeighted(bin_win_right, 0.5, img_win_right, 0.7, 0)
+   
+            cv2.rectangle(img_plot, (win_xleft_low,win_y_low), (win_xleft_high,win_y_high), (0,255,0), 5)
+            cv2.rectangle(img_plot, (win_xright_low,win_y_low), (win_xright_high,win_y_high), (0,255,0), 5)
+            
+            f, _ = plt.subplots(1, 2, figsize=(13,5))
+
+            plt.subplot(121)
+            plt.axis('off')
+            plt.imshow(binary, cmap='gray')
+
+            plt.subplot(122)
+            plt.axis('off')
+            plt.imshow(img_plot)
+
+            plt.subplots_adjust(top=0.98, bottom=0.0, left=0.0, right=1.0, hspace=0.1, wspace=0.05)
+
+            img_plot[win_y_low:win_y_high, win_xleft_low:win_xleft_high] = win_left
+            img_plot[win_y_low:win_y_high, win_xright_low:win_xright_high] = win_right
+        
+    nonzero = binary.nonzero()
+    nonzeroy = np.array(nonzero[0])
+    nonzerox = np.array(nonzero[1])
+
+    left_lane_inds = \
+        ((nonzerox > (left_fit[0]*(nonzeroy**2) + left_fit[1]*nonzeroy + left_fit[2] - margin)) &
+        (nonzerox < (left_fit[0]*(nonzeroy**2) + left_fit[1]*nonzeroy + left_fit[2] + margin))) 
+
+    right_lane_inds = \
+        ((nonzerox > (right_fit[0]*(nonzeroy**2) + right_fit[1]*nonzeroy + right_fit[2] - margin)) &
+         (nonzerox < (right_fit[0]*(nonzeroy**2) + right_fit[1]*nonzeroy + right_fit[2] + margin)))  
+
+    leftx = nonzerox[left_lane_inds]
+    lefty = nonzeroy[left_lane_inds]
+    rightx = nonzerox[right_lane_inds]
+    righty = nonzeroy[right_lane_inds]
+
+    if len(leftx) > min_lane_pts:
+        left_fit = np.polyfit(lefty, leftx, 2)
+    else:
+        if diagnostics: print('WARNING: Less than {} pts detected for the left lane. {}'.format(min_lane_pts, len(leftx)))
+
+    if len(rightx) > min_lane_pts:
+        right_fit = np.polyfit(righty, rightx, 2)
+    else:
+        if diagnostics: print('WARNING: Less than {} pts detected for the right lane. {}'.format(min_lane_pts, len(rightx)))
+        
+    valid = check_validity(left_fit, right_fit, diagnostics=diagnostics)
+
+    if valid:
+        if len(cache) < smoothing_window:
+            cache = np.concatenate((cache, [np.array([left_fit, right_fit])]), axis=0)
+        elif len(cache) >= smoothing_window:
+            cache[:-1] = cache[1:]
+            cache[-1] = np.array([left_fit, right_fit])
+  
+        avg_params = np.mean(cache, axis=0)
+        left_fit, right_fit = avg_params[0], avg_params[1]
+        plot_xleft, plot_yleft, plot_xright, plot_yright = get_poly_points(left_fit, right_fit)
+        curr_poly_param = np.array([left_fit, right_fit])
+    else:
+        attempts += 1
+        curr_poly_param = prev_poly_param
+    
+    out = np.dstack([binary, binary, binary]) * 255
+    win_img = np.zeros_like(out)
+
+    out[lefty, leftx] = [255, 0, 0]
+    out[righty, rightx] = [255, 10, 255]
+
+    left_window1 = np.array([np.transpose(np.vstack([plot_xleft - margin, plot_yleft]))])
+    left_window2 = np.array([np.flipud(np.transpose(np.vstack([plot_xleft + margin, plot_yleft])))])
+    left_pts = np.hstack([left_window1, left_window2])
+
+    right_window1 = np.array([np.transpose(np.vstack([plot_xright - margin, plot_yright]))])
+    right_window2 = np.array([np.flipud(np.transpose(np.vstack([plot_xright + margin, plot_yright])))])
+    right_pts = np.hstack([right_window1, right_window2])
+
+    cv2.fillPoly(win_img, np.int_([left_pts]), (0, 255, 0))
+    cv2.fillPoly(win_img, np.int_([right_pts]), (0, 255, 0))
+
+    out = cv2.addWeighted(out, 1, win_img, 0.25, 0)
+
+    left_poly_pts = np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])
+    right_poly_pts = np.array([np.transpose(np.vstack([plot_xright, plot_yright]))])
+
+    cv2.polylines(out, np.int32([left_poly_pts]), isClosed=False, color=(200,255,155), thickness=4)
+    cv2.polylines(out, np.int32([right_poly_pts]), isClosed=False, color=(200,255,155), thickness=4)
+
+    return out, curr_poly_param
+
+
+#----------------Adaptive Search Op-----------------
+cache = np.array([])
+attempts = 0
+max_attempts = 4
+reset = True
+%matplotlib inline
+for frame_path in test_img_paths:
+    img = mpimg.imread(frame_path)
+    warped, (M, invM) = get_image(frame_path)
+
+    if reset == True:
+        binary = BinaryImage(warped)
+        ret, out, poly_param = polyfit_sliding_window(binary, visualise=False, diagnostics=True)
+        if ret:
+            reset = False
+            cache = np.array([poly_param])
+
+    else:
+        out, poly_param = polyfit_adapt_search(warped, poly_param, visualise=False, diagnostics=False)
+        if attempts == max_attempts:
+            attempts = 0
+            reset = True
+        out_unwarped = cv2.warpPerspective(out, invM, (IMG_SHAPE[1], IMG_SHAPE[0]), flags=cv2.INTER_LINEAR)
+        img_overlay = np.copy(img)
+        img_overlay = cv2.addWeighted(out_unwarped, 0.5, img, 0.5, 0)
+        plot_images([(warped, 'Original'), (out, 'Out'), (img_overlay, 'Overlay')], figsize=(20, 18))
+
+        
