@@ -7,6 +7,8 @@ import os
 import pickle
 import re
 import math
+import sys
+
 #camera calibration 
 def chunk(x):
     try:
