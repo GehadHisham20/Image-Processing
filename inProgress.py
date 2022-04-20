@@ -883,3 +883,14 @@ if 8 in plot_demo:
     reset = True
     result = pipeline(mpimg.imread(test_img_paths[4]),'d', visualise=True, diagnostics=1)
     result = pipeline(mpimg.imread(test_img_paths[4]),'r', visualise=True, diagnostics=1)
+    
+    
+#-------------Making Output Video--------------------
+video_input = VideoFileClip(sys.argv[1])          
+video_output = sys.argv[2]       
+process_frame = lambda frame: pipeline(frame,sys.argv[3], visualise=True, diagnostics=1)
+cache = np.array([])
+attempts = 0
+reset = True   
+processed_video = video_input.fl_image(process_frame)
+%time processed_video.write_videofile(video_output, audio=False)
