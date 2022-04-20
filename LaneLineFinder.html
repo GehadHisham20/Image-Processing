@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2e08d42792fe4f9787ba66e16796edb9</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.image <span class="im">as</span> mpimg</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> moviepy.editor <span class="im">import</span> VideoFileClip</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> HTML</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython <span class="im">import</span> get_ipython</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------Camera Calibration----------------</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> chunk(x):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(x)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>     </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_key(s):</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [chunk(c) <span class="cf">for</span> c <span class="kw">in</span> re.split(<span class="st">&#39;([0-9]+)&#39;</span>, s)]</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_fn(l):</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    l.sort(key<span class="op">=</span>sort_key)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_images(data, layout<span class="op">=</span><span class="st">&#39;row&#39;</span>, cols<span class="op">=</span><span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">12</span>)):</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    rows <span class="op">=</span> math.ceil(<span class="bu">len</span>(data) <span class="op">/</span> cols)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    f, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>figsize)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> layout <span class="op">==</span> <span class="st">&#39;row&#39;</span>:</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> idx, d <span class="kw">in</span> <span class="bu">enumerate</span>(data):</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            img, title <span class="op">=</span> d</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            plt.subplot(rows, cols, idx<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            plt.title(title, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            plt.axis(<span class="st">&#39;off&#39;</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            <span class="co">#len(img.shape) gives you two, it has a single channel a 2D array (grayscale image)</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                plt.imshow(img, cmap<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">elif</span> <span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                plt.imshow(img)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> layout <span class="op">==</span> <span class="st">&#39;col&#39;</span>:</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(rows):</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> c <span class="kw">in</span> <span class="bu">range</span>(cols):</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                img, title <span class="op">=</span> data[r <span class="op">+</span> rows<span class="op">*</span>c]</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>                nb_channels <span class="op">=</span> <span class="bu">len</span>(img.shape)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>                plt.subplot(rows, cols, counter<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>                plt.title(title, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>                plt.axis(<span class="st">&#39;off&#39;</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>                    plt.imshow(img, cmap<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>                <span class="cf">elif</span> <span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>                    plt.imshow(img)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>                counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> capture_frames(video_path, frames_dir):</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    cap <span class="op">=</span> cv2.VideoCapture(video_path)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Starting frame capture...&#39;</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    success <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> success:</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        success, frame <span class="op">=</span> cap.read()</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        cv2.imwrite(frames_dir <span class="op">+</span> <span class="st">&#39;frame</span><span class="sc">{:02}</span><span class="st">.jpg&#39;</span>.<span class="bu">format</span>(count), frame)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        count <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Completed!&#39;</span>)</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>test_img_paths <span class="op">=</span> glob.glob(<span class="st">&#39;Test/test*.jpg&#39;</span>)</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>sort_fn(test_img_paths)</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>video1 <span class="op">=</span> glob.glob(<span class="st">&#39;video_frames/frame*.jpg&#39;</span>)</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>sort_fn(video1)</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>video2 <span class="op">=</span> glob.glob(<span class="st">&#39;video_frames_1/frame*.jpg&#39;</span>)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>sort_fn(video2)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>plot_demo <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------Camera Calibration------------------</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#fn calibrate runs once just to calibrate the camera </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calibrate_camera():</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    imgpaths <span class="op">=</span> glob.glob(<span class="st">&#39;CamCal/calibration*.jpg&#39;</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    sort_fn(imgpaths)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    image <span class="op">=</span> cv2.imread(imgpaths[<span class="dv">0</span>])</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    imshape <span class="op">=</span> image.shape[:<span class="dv">2</span>] </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    plt.imshow(image)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Image shape: </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(image.shape))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    objpoints <span class="op">=</span> []</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    imgpoints <span class="op">=</span> []</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    nx <span class="op">=</span> <span class="dv">9</span> </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    ny <span class="op">=</span> <span class="dv">6</span> </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    objp <span class="op">=</span> np.zeros([ny<span class="op">*</span>nx, <span class="dv">3</span>], dtype<span class="op">=</span>np.float32)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    objp[:,:<span class="dv">2</span>] <span class="op">=</span> np.mgrid[<span class="dv">0</span>:nx, <span class="dv">0</span>:ny].T.reshape(<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx, imgpath <span class="kw">in</span> <span class="bu">enumerate</span>(imgpaths):</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        img <span class="op">=</span> cv2.imread(imgpath)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        gray <span class="op">=</span> cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        ret, corners <span class="op">=</span> cv2.findChessboardCorners(gray, (nx, ny), <span class="va">None</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ret:</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            img <span class="op">=</span> cv2.drawChessboardCorners(img, (nx, ny), corners, ret)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>            imgpoints.append(corners)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            objpoints.append(objp)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            cv2.imshow(<span class="st">&#39;img&#39;</span>, img)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            cv2.waitKey(<span class="dv">500</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    ret, mtx, dist, rvecs, tvecs <span class="op">=</span> cv2.calibrateCamera(objpoints, imgpoints, imshape[::<span class="op">-</span><span class="dv">1</span>], <span class="va">None</span>, <span class="va">None</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    cv2.destroyAllWindows()</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mtx, dist</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co">#the calibration process only needs to be run once in the absense of the pickled file</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.exists(<span class="st">&#39;CamCal.p&#39;</span>):</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;CamCal.p&#39;</span>, mode<span class="op">=</span><span class="st">&#39;rb&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> pickle.load(f)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        mtx, dist <span class="op">=</span> data[<span class="st">&#39;mtx&#39;</span>], data[<span class="st">&#39;dist&#39;</span>]</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Camera calibration matrix &amp; distortion coefficients are saved!&#39;</span>)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    mtx, dist <span class="op">=</span> calibrate_camera()</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;CamCal.p&#39;</span>, mode<span class="op">=</span><span class="st">&#39;wb&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        pickle.dump({<span class="st">&#39;mtx&#39;</span>: mtx, <span class="st">&#39;dist&#39;</span>: dist}, f)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> undistort(img, mtx, dist):</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    undistort <span class="op">=</span> cv2.undistort(img, mtx, dist, <span class="va">None</span>, mtx)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> undistort</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------Calibration and undistortion op-------------------</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">1</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    ccimg <span class="op">=</span> cv2.imread(<span class="st">&#39;CamCal/calibration1.jpg&#39;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    ccimg_undist <span class="op">=</span> undistort(ccimg, mtx, dist)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">%</span>matplotlib inline</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    plot_images([</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        (ccimg, <span class="st">&#39;Original Image&#39;</span>),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        (ccimg_undist, <span class="st">&#39;Undistorted Image&#39;</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    img_orig <span class="op">=</span> mpimg.imread(test_img_paths[<span class="dv">6</span>])</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> undistort(img_orig, mtx, dist)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    plot_images([</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        (img_orig, <span class="st">&#39;Original Image&#39;</span>),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        (img, <span class="st">&#39;Undistorted Image&#39;</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    ])</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true" data-scrolled="false">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------Perspective Transformation----------------</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>IMG_SHAPE <span class="op">=</span> (<span class="dv">720</span>, <span class="dv">1280</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_roi(img, vertices):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    vertices <span class="op">=</span> np.array(vertices, ndmin<span class="op">=</span><span class="dv">3</span>, dtype<span class="op">=</span>np.int32)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        fill_color <span class="op">=</span> (<span class="dv">255</span>,) <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        fill_color <span class="op">=</span> <span class="dv">255</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> np.zeros_like(img)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> cv2.fillPoly(mask, vertices, fill_color)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cv2.bitwise_and(img, mask)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> warp_image(img, warp_shape, src, dst):</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    M <span class="op">=</span> cv2.getPerspectiveTransform(src, dst)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    invM <span class="op">=</span> cv2.getPerspectiveTransform(dst, src)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    warped <span class="op">=</span> cv2.warpPerspective(img, M, warp_shape, flags<span class="op">=</span>cv2.INTER_LINEAR)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> warped, M, invM</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> preprocess_image(img, visualise<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    ysize <span class="op">=</span> img.shape[<span class="dv">0</span>]</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    xsize <span class="op">=</span> img.shape[<span class="dv">1</span>]</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    undist <span class="op">=</span> undistort(img, mtx, dist)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    src <span class="op">=</span> np.float32([</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">696</span>,<span class="dv">455</span>),    </span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">587</span>,<span class="dv">455</span>), </span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">235</span>,<span class="dv">700</span>),  </span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">1075</span>,<span class="dv">700</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    dst <span class="op">=</span> np.float32([</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        (xsize <span class="op">-</span> <span class="dv">350</span>, <span class="dv">0</span>),</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">350</span>, <span class="dv">0</span>),</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">350</span>, ysize),</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        (xsize <span class="op">-</span> <span class="dv">350</span>, ysize)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    warped, M, invM <span class="op">=</span> warp_image(undist, (xsize, ysize), src, dst)</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    vertices <span class="op">=</span> np.array([</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">200</span>, ysize],</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">200</span>, <span class="dv">0</span>],</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">1100</span>, <span class="dv">0</span>],</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>        [<span class="dv">1100</span>, ysize]</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    roi <span class="op">=</span> get_roi(warped, vertices)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> visualise:</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>        img_copy <span class="op">=</span> np.copy(img)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>        roi_copy <span class="op">=</span> np.copy(roi)</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>        cv2.polylines(img_copy, [np.int32(src)], <span class="va">True</span>, (<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>), <span class="dv">3</span>)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>        cv2.polylines(roi_copy, [np.int32(dst)], <span class="va">True</span>, (<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>), <span class="dv">3</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>        plot_images([</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>            (img_copy, <span class="st">&#39;Original Image&#39;</span>),</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>            (roi_copy, <span class="st">&#39;Bird</span><span class="ch">\&#39;</span><span class="st">s Eye View Perspective&#39;</span>)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>        ])</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> roi, (M, invM)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_image(img_path, visualise<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> mpimg.imread(img_path)</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> preprocess_image(img, visualise<span class="op">=</span>visualise)</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#------------------Transformation op------------------</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">2</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">%</span>matplotlib inline</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> path <span class="kw">in</span> test_img_paths[:]:</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        get_image(path, visualise<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------Binary img--------------------</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> BinaryThreshold(img, low, high):    </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        output <span class="op">=</span> np.zeros_like(img)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        mask <span class="op">=</span> (img <span class="op">&gt;=</span> low) <span class="op">&amp;</span> (img <span class="op">&lt;=</span> high)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        output <span class="op">=</span> np.zeros_like(img[:,:,<span class="dv">0</span>])</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        mask <span class="op">=</span> (img[:,:,<span class="dv">0</span>] <span class="op">&gt;=</span> low[<span class="dv">0</span>]) <span class="op">&amp;</span> (img[:,:,<span class="dv">0</span>] <span class="op">&lt;=</span> high[<span class="dv">0</span>]) <span class="op">\</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            <span class="op">&amp;</span> (img[:,:,<span class="dv">1</span>] <span class="op">&gt;=</span> low[<span class="dv">1</span>]) <span class="op">&amp;</span> (img[:,:,<span class="dv">1</span>] <span class="op">&lt;=</span> high[<span class="dv">1</span>]) <span class="op">\</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>            <span class="op">&amp;</span> (img[:,:,<span class="dv">2</span>] <span class="op">&gt;=</span> low[<span class="dv">2</span>]) <span class="op">&amp;</span> (img[:,:,<span class="dv">2</span>] <span class="op">&lt;=</span> high[<span class="dv">2</span>])</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    output[mask] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> output</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> BinaryImage(img, visualise<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    lab <span class="op">=</span> cv2.cvtColor(img, cv2.COLOR_RGB2LAB)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> lab[:,:,<span class="dv">0</span>]</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    L_max, L_mean <span class="op">=</span> np.<span class="bu">max</span>(L), np.mean(L)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    B <span class="op">=</span> lab[:,:,<span class="dv">2</span>]</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    B_max, B_mean <span class="op">=</span> np.<span class="bu">max</span>(B), np.mean(B)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    L_adapt_yellow <span class="op">=</span> <span class="bu">max</span>(<span class="dv">80</span>, <span class="bu">int</span>(L_max <span class="op">*</span> <span class="fl">0.45</span>))</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    B_adapt_yellow <span class="op">=</span>  <span class="bu">max</span>(<span class="bu">int</span>(B_max <span class="op">*</span> <span class="fl">0.70</span>), <span class="bu">int</span>(B_mean <span class="op">*</span> <span class="fl">1.2</span>))</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    lab_low_yellow <span class="op">=</span> np.array((L_adapt_yellow, <span class="dv">120</span>, B_adapt_yellow))</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    lab_high_yellow <span class="op">=</span> np.array((<span class="dv">255</span>, <span class="dv">145</span>, <span class="dv">255</span>))</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    lab_yellow <span class="op">=</span> BinaryThreshold(lab, lab_low_yellow, lab_high_yellow)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    lab_binary <span class="op">=</span>lab_yellow</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    hsv <span class="op">=</span> cv2.cvtColor(img, cv2.COLOR_RGB2HSV)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    H <span class="op">=</span> hsv[:,:,<span class="dv">0</span>]</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    H_max, H_mean <span class="op">=</span> np.<span class="bu">max</span>(H), np.mean(H)</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    S <span class="op">=</span> hsv[:,:,<span class="dv">1</span>]</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    S_max, S_mean <span class="op">=</span> np.<span class="bu">max</span>(S), np.mean(S)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> hsv[:,:,<span class="dv">2</span>]</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    V_max, V_mean <span class="op">=</span> np.<span class="bu">max</span>(V), np.mean(V)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    S_adapt_yellow <span class="op">=</span>  <span class="bu">max</span>(<span class="bu">int</span>(S_max <span class="op">*</span> <span class="fl">0.25</span>), <span class="bu">int</span>(S_mean <span class="op">*</span> <span class="fl">1.75</span>))</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    V_adapt_yellow <span class="op">=</span>  <span class="bu">max</span>(<span class="dv">50</span>, <span class="bu">int</span>(V_mean <span class="op">*</span> <span class="fl">1.25</span>))</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    hsv_low_yellow <span class="op">=</span> np.array((<span class="dv">15</span>, S_adapt_yellow, V_adapt_yellow))</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    hsv_high_yellow <span class="op">=</span> np.array((<span class="dv">30</span>, <span class="dv">255</span>, <span class="dv">255</span>))</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    hsv_yellow <span class="op">=</span> BinaryThreshold(hsv, hsv_low_yellow, hsv_high_yellow)    </span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    V_adapt_white <span class="op">=</span> <span class="bu">max</span>(<span class="dv">150</span>, <span class="bu">int</span>(V_max <span class="op">*</span> <span class="fl">0.8</span>),<span class="bu">int</span>(V_mean <span class="op">*</span> <span class="fl">1.25</span>))</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>    hsv_low_white <span class="op">=</span> np.array((<span class="dv">0</span>, <span class="dv">0</span>, V_adapt_white))</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    hsv_high_white <span class="op">=</span> np.array((<span class="dv">255</span>, <span class="dv">40</span>, <span class="dv">220</span>))</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    hsv_white <span class="op">=</span> BinaryThreshold(hsv, hsv_low_white, hsv_high_white)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    hsv_binary <span class="op">=</span> hsv_yellow <span class="op">|</span> hsv_white</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    <span class="co">#HLS</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    hls <span class="op">=</span> cv2.cvtColor(img, cv2.COLOR_RGB2HLS)</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> hls[:,:,<span class="dv">1</span>]</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    L_max, L_mean <span class="op">=</span> np.<span class="bu">max</span>(L), np.mean(L)</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    S <span class="op">=</span> hls[:,:,<span class="dv">2</span>]</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>    S_max, S_mean <span class="op">=</span> np.<span class="bu">max</span>(S), np.mean(S)</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># YELLOW</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    L_adapt_yellow <span class="op">=</span> <span class="bu">max</span>(<span class="dv">80</span>, <span class="bu">int</span>(L_mean <span class="op">*</span> <span class="fl">1.25</span>))</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>    S_adapt_yellow <span class="op">=</span> <span class="bu">max</span>(<span class="bu">int</span>(S_max <span class="op">*</span> <span class="fl">0.25</span>), <span class="bu">int</span>(S_mean <span class="op">*</span> <span class="fl">1.75</span>))</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>    hls_low_yellow <span class="op">=</span> np.array((<span class="dv">15</span>, L_adapt_yellow, S_adapt_yellow))</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>    hls_high_yellow <span class="op">=</span> np.array((<span class="dv">30</span>, <span class="dv">255</span>, <span class="dv">255</span>))</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>    hls_yellow <span class="op">=</span> BinaryThreshold(hls, hls_low_yellow, hls_high_yellow)</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>    <span class="co">#white</span></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>    L_adapt_white <span class="op">=</span>  <span class="bu">max</span>(<span class="dv">160</span>, <span class="bu">int</span>(L_max <span class="op">*</span><span class="fl">0.8</span>),<span class="bu">int</span>(L_mean <span class="op">*</span> <span class="fl">1.25</span>))</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>    hls_low_white <span class="op">=</span> np.array((<span class="dv">0</span>, L_adapt_white,  <span class="dv">0</span>))</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>    hls_high_white <span class="op">=</span> np.array((<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">255</span>))</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>    hls_white <span class="op">=</span> BinaryThreshold(hls, hls_low_white, hls_high_white)</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>    hls_binary <span class="op">=</span> hls_yellow <span class="op">|</span> hls_white</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>    <span class="co">#R color channel (white)</span></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>    R <span class="op">=</span> img[:,:,<span class="dv">0</span>]</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>    R_max, R_mean <span class="op">=</span> np.<span class="bu">max</span>(R), np.mean(R)</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>    R_low_white <span class="op">=</span> <span class="bu">min</span>(<span class="bu">max</span>(<span class="dv">150</span>, <span class="bu">int</span>(R_max <span class="op">*</span> <span class="fl">0.55</span>), <span class="bu">int</span>(R_mean <span class="op">*</span> <span class="fl">1.95</span>)),<span class="dv">230</span>)</span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>    R_binary <span class="op">=</span> BinaryThreshold(R, R_low_white, <span class="dv">255</span>)</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Gaussian kernel </span></span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>    <span class="co">#yellow</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>    adapt_yellow_S <span class="op">=</span> cv2.adaptiveThreshold(hls[:,:,<span class="dv">2</span>], <span class="dv">1</span>, <span class="op">\</span></span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>                                                  cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, <span class="dv">161</span>, <span class="op">-</span><span class="dv">5</span>)</span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>    adapt_yellow_B <span class="op">=</span> cv2.adaptiveThreshold(lab[:,:,<span class="dv">2</span>], <span class="dv">1</span>, <span class="op">\</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>                                                  cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, <span class="dv">161</span>, <span class="op">-</span><span class="dv">5</span>)</span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>    adapt_yellow <span class="op">=</span> adapt_yellow_S <span class="op">&amp;</span> adapt_yellow_B</span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>    <span class="co">#white</span></span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>    adapt_white_R <span class="op">=</span> cv2.adaptiveThreshold(img[:,:,<span class="dv">0</span>], <span class="dv">1</span>, <span class="op">\</span></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>                                                  cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, <span class="dv">161</span>, <span class="op">-</span><span class="dv">27</span>)</span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>    adapt_white_L <span class="op">=</span> cv2.adaptiveThreshold(hsv[:,:,<span class="dv">2</span>], <span class="dv">1</span>, <span class="op">\</span></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>                                                  cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, <span class="dv">161</span>, <span class="op">-</span><span class="dv">27</span>)</span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>    adapt_white <span class="op">=</span> adapt_white_R <span class="op">&amp;</span> adapt_white_L</span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>                                                      </span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>    adapt_binary <span class="op">=</span>  adapt_yellow <span class="op">|</span> adapt_white</span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>    combined <span class="op">=</span> np.asarray(R_binary <span class="op">+</span> lab_binary <span class="op">+</span> hls_binary <span class="op">+</span> hsv_binary <span class="op">+</span> adapt_binary, dtype<span class="op">=</span>np.uint8)</span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>    combined[combined <span class="op">&lt;</span> <span class="dv">3</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>    combined[combined <span class="op">&gt;=</span> <span class="dv">3</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> visualise:</span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>        plot_images([</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>            (img, <span class="st">&#39;Original&#39;</span>),</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>            (R_binary, <span class="st">&#39;R&#39;</span>),</span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>            (hls_binary, <span class="st">&#39;HLS&#39;</span>),</span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>            (hsv_binary, <span class="st">&#39;HSV&#39;</span>),</span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>            (lab_binary, <span class="st">&#39;LAB&#39;</span>),</span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>            (adapt_binary, <span class="st">&#39;Adaptive Thresh&#39;</span>),</span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>            (combined, <span class="st">&#39;Combined&#39;</span>),</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>        ], figsize<span class="op">=</span>(<span class="dv">32</span>, <span class="dv">42</span>))</span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>  combined</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------Show threshold binary img--------------------------</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">3</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">%</span>matplotlib inline</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> img_path <span class="kw">in</span> test_img_paths[:<span class="dv">2</span>]: </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        img, _ <span class="op">=</span> get_image(img_path)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        BinaryImage(img, visualise<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------Detection of lane lines-------------------------</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_poly_points(left_fit, right_fit):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    ysize, xsize <span class="op">=</span> IMG_SHAPE</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    plot_y <span class="op">=</span> np.linspace(<span class="dv">0</span>, ysize<span class="op">-</span><span class="dv">1</span>, ysize)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    plot_xleft <span class="op">=</span> left_fit[<span class="dv">0</span>] <span class="op">*</span> plot_y<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> left_fit[<span class="dv">1</span>] <span class="op">*</span> plot_y <span class="op">+</span> left_fit[<span class="dv">2</span>]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    plot_xright <span class="op">=</span> right_fit[<span class="dv">0</span>] <span class="op">*</span> plot_y<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> right_fit[<span class="dv">1</span>] <span class="op">*</span> plot_y <span class="op">+</span> right_fit[<span class="dv">2</span>]</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    plot_xleft <span class="op">=</span> plot_xleft[(plot_xleft <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (plot_xleft <span class="op">&lt;=</span> xsize <span class="op">-</span> <span class="dv">1</span>)]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    plot_xright <span class="op">=</span> plot_xright[(plot_xright <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (plot_xright <span class="op">&lt;=</span> xsize <span class="op">-</span> <span class="dv">1</span>)]</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    plot_yleft <span class="op">=</span> np.linspace(ysize <span class="op">-</span> <span class="bu">len</span>(plot_xleft), ysize <span class="op">-</span> <span class="dv">1</span>, <span class="bu">len</span>(plot_xleft))</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    plot_yright <span class="op">=</span> np.linspace(ysize <span class="op">-</span> <span class="bu">len</span>(plot_xright), ysize <span class="op">-</span> <span class="dv">1</span>, <span class="bu">len</span>(plot_xright))</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> plot_xleft.astype(np.<span class="bu">int</span>), plot_yleft.astype(np.<span class="bu">int</span>), plot_xright.astype(np.<span class="bu">int</span>), plot_yright.astype(np.<span class="bu">int</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_validity(left_fit, right_fit, diagnostics<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> left_fit <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> right_fit <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    plot_xleft, plot_yleft, plot_xright, plot_yright <span class="op">=</span> get_poly_points(left_fit, right_fit)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> IMG_SHAPE[<span class="dv">0</span>] <span class="op">-</span> <span class="dv">1</span> <span class="co"># Bottom</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    y2 <span class="op">=</span> IMG_SHAPE[<span class="dv">0</span>] <span class="op">-</span> <span class="bu">int</span>(<span class="bu">min</span>(<span class="bu">len</span>(plot_yleft), <span class="bu">len</span>(plot_yright)) <span class="op">*</span> <span class="fl">0.35</span>) </span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    y3 <span class="op">=</span> IMG_SHAPE[<span class="dv">0</span>] <span class="op">-</span> <span class="bu">int</span>(<span class="bu">min</span>(<span class="bu">len</span>(plot_yleft), <span class="bu">len</span>(plot_yright)) <span class="op">*</span> <span class="fl">0.75</span>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    x1l <span class="op">=</span> left_fit[<span class="dv">0</span>]  <span class="op">*</span> (y1<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> left_fit[<span class="dv">1</span>]  <span class="op">*</span> y1 <span class="op">+</span> left_fit[<span class="dv">2</span>]</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    x2l <span class="op">=</span> left_fit[<span class="dv">0</span>]  <span class="op">*</span> (y2<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> left_fit[<span class="dv">1</span>]  <span class="op">*</span> y2 <span class="op">+</span> left_fit[<span class="dv">2</span>]</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    x3l <span class="op">=</span> left_fit[<span class="dv">0</span>]  <span class="op">*</span> (y3<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> left_fit[<span class="dv">1</span>]  <span class="op">*</span> y3 <span class="op">+</span> left_fit[<span class="dv">2</span>]</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    x1r <span class="op">=</span> right_fit[<span class="dv">0</span>] <span class="op">*</span> (y1<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> right_fit[<span class="dv">1</span>] <span class="op">*</span> y1 <span class="op">+</span> right_fit[<span class="dv">2</span>]</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    x2r <span class="op">=</span> right_fit[<span class="dv">0</span>] <span class="op">*</span> (y2<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> right_fit[<span class="dv">1</span>] <span class="op">*</span> y2 <span class="op">+</span> right_fit[<span class="dv">2</span>]</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    x3r <span class="op">=</span> right_fit[<span class="dv">0</span>] <span class="op">*</span> (y3<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> right_fit[<span class="dv">1</span>] <span class="op">*</span> y3 <span class="op">+</span> right_fit[<span class="dv">2</span>]</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    x1_diff <span class="op">=</span> <span class="bu">abs</span>(x1l <span class="op">-</span> x1r)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    x2_diff <span class="op">=</span> <span class="bu">abs</span>(x2l <span class="op">-</span> x2r)</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    x3_diff <span class="op">=</span> <span class="bu">abs</span>(x3l <span class="op">-</span> x3r)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    min_dist_y1 <span class="op">=</span> <span class="dv">480</span> </span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    max_dist_y1 <span class="op">=</span> <span class="dv">730</span> </span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    min_dist_y2 <span class="op">=</span> <span class="dv">280</span></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    max_dist_y2 <span class="op">=</span> <span class="dv">730</span> </span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    min_dist_y3 <span class="op">=</span> <span class="dv">140</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>    max_dist_y3 <span class="op">=</span> <span class="dv">730</span> </span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x1_diff <span class="op">&lt;</span> min_dist_y1) <span class="op">|</span> (x1_diff <span class="op">&gt;</span> max_dist_y1) <span class="op">|</span> <span class="op">\</span></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>        (x2_diff <span class="op">&lt;</span> min_dist_y2) <span class="op">|</span> (x2_diff <span class="op">&gt;</span> max_dist_y2) <span class="op">|</span> <span class="op">\</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>        (x3_diff <span class="op">&lt;</span> min_dist_y3) <span class="op">|</span> (x3_diff <span class="op">&gt;</span> max_dist_y3):</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> diagnostics:</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;Violated distance criterion: &quot;</span> <span class="op">+</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;x1_diff == </span><span class="sc">{:.2f}</span><span class="st">, x2_diff == </span><span class="sc">{:.2f}</span><span class="st">, x3_diff == </span><span class="sc">{:.2f}</span><span class="st">&quot;</span>.<span class="bu">format</span>(x1_diff, x2_diff, x3_diff))</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>    y1left_dx  <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> left_fit[<span class="dv">0</span>]  <span class="op">*</span> y1 <span class="op">+</span> left_fit[<span class="dv">1</span>]</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    y3left_dx  <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> left_fit[<span class="dv">0</span>]  <span class="op">*</span> y3 <span class="op">+</span> left_fit[<span class="dv">1</span>]</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>    y1right_dx <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> right_fit[<span class="dv">0</span>] <span class="op">*</span> y1 <span class="op">+</span> right_fit[<span class="dv">1</span>]</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>    y3right_dx <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> right_fit[<span class="dv">0</span>] <span class="op">*</span> y3 <span class="op">+</span> right_fit[<span class="dv">1</span>]</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>    norm1 <span class="op">=</span> <span class="bu">abs</span>(y1left_dx <span class="op">-</span> y1right_dx)</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>    norm2 <span class="op">=</span> <span class="bu">abs</span>(y3left_dx <span class="op">-</span> y3right_dx)</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>    thresh <span class="op">=</span> <span class="fl">0.6</span></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (norm1 <span class="op">&gt;=</span> thresh) <span class="op">|</span> (norm2 <span class="op">&gt;=</span> thresh):</span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> diagnostics:</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">&quot;Violated tangent criterion: &quot;</span> <span class="op">+</span></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;norm1 == </span><span class="sc">{:.3f}</span><span class="st">, norm2 == </span><span class="sc">{:.3f}</span><span class="st"> (thresh == </span><span class="sc">{}</span><span class="st">).&quot;</span>.<span class="bu">format</span>(norm1, norm2, thresh))</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> polyfit_sliding_window(binary, lane_width_px<span class="op">=</span><span class="dv">578</span>, visualise<span class="op">=</span><span class="va">False</span>, diagnostics<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> cache</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>    ret <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> binary.<span class="bu">max</span>() <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span>, np.array([]), np.array([]), np.array([])</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>    histogram <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>    cutoffs <span class="op">=</span> [<span class="bu">int</span>(binary.shape[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">2</span>), <span class="dv">0</span>]</span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cutoff <span class="kw">in</span> cutoffs:</span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a>        histogram <span class="op">=</span> np.<span class="bu">sum</span>(binary[cutoff:, :], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> histogram.<span class="bu">max</span>() <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> histogram.<span class="bu">max</span>() <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Error! Unable to detect lane lines in this frame&#39;</span>)</span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span>, np.array([]), np.array([])</span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a>    midpoint <span class="op">=</span> np.<span class="bu">int</span>(histogram.shape[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a>    leftx_base <span class="op">=</span> np.argmax(histogram[:midpoint])</span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a>    rightx_base <span class="op">=</span> np.argmax(histogram[midpoint:]) <span class="op">+</span> midpoint</span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> visualise:</span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>        plot_images([(binary, <span class="st">&#39;Binary&#39;</span>)])</span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>        plt.plot(histogram, <span class="st">&#39;m&#39;</span>, linewidth<span class="op">=</span><span class="fl">4.0</span>)</span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a>        plt.plot((midpoint, midpoint), (<span class="dv">0</span>, IMG_SHAPE[<span class="dv">0</span>]), <span class="st">&#39;c&#39;</span>)</span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a>        plt.plot((<span class="dv">0</span>, IMG_SHAPE[<span class="dv">1</span>]), (cutoff, cutoff), <span class="st">&#39;c&#39;</span>)</span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> np.dstack((binary, binary, binary)) <span class="op">*</span> <span class="dv">255</span></span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>    nb_windows <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>    margin <span class="op">=</span> <span class="dv">100</span> </span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a>    minpix <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>    window_height <span class="op">=</span> <span class="bu">int</span>(IMG_SHAPE[<span class="dv">0</span>] <span class="op">/</span> nb_windows)</span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a>    min_lane_pts <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a>    nonzero <span class="op">=</span> binary.nonzero()</span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a>    nonzerox <span class="op">=</span> np.array(nonzero[<span class="dv">1</span>])</span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>    nonzeroy <span class="op">=</span> np.array(nonzero[<span class="dv">0</span>])</span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>    leftx_current <span class="op">=</span> leftx_base</span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>    rightx_current <span class="op">=</span> rightx_base</span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>    left_lane_inds <span class="op">=</span> []</span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a>    right_lane_inds <span class="op">=</span> []</span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> window <span class="kw">in</span> <span class="bu">range</span>(nb_windows):</span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a>        win_y_low <span class="op">=</span> IMG_SHAPE[<span class="dv">0</span>] <span class="op">-</span> (<span class="dv">1</span> <span class="op">+</span> window) <span class="op">*</span> window_height</span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>        win_y_high <span class="op">=</span> IMG_SHAPE[<span class="dv">0</span>] <span class="op">-</span> window <span class="op">*</span> window_height</span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a>        win_xleft_low <span class="op">=</span> leftx_current <span class="op">-</span> margin</span>
+<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>        win_xleft_high <span class="op">=</span> leftx_current <span class="op">+</span> margin</span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>        win_xright_low <span class="op">=</span> rightx_current <span class="op">-</span> margin</span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a>        win_xright_high <span class="op">=</span> rightx_current <span class="op">+</span> margin</span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a>        cv2.rectangle(out, (win_xleft_low, win_y_low), (win_xleft_high, win_y_high),<span class="op">\</span></span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a>                      (<span class="dv">0</span>, <span class="dv">255</span>, <span class="dv">0</span>), <span class="dv">2</span>)</span>
+<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a>        cv2.rectangle(out, (win_xright_low, win_y_low), (win_xright_high, win_y_high),<span class="op">\</span></span>
+<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a>                      (<span class="dv">0</span>, <span class="dv">255</span>, <span class="dv">0</span>), <span class="dv">2</span>)</span>
+<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a>        good_left_inds <span class="op">=</span> ((nonzeroy <span class="op">&gt;=</span> win_y_low) <span class="op">&amp;</span> (nonzeroy <span class="op">&lt;=</span> win_y_high)</span>
+<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a>                         <span class="op">&amp;</span> (nonzerox <span class="op">&gt;=</span> win_xleft_low) <span class="op">&amp;</span> (nonzerox <span class="op">&lt;=</span> win_xleft_high)).nonzero()[<span class="dv">0</span>]</span>
+<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a>        good_right_inds <span class="op">=</span> ((nonzeroy <span class="op">&gt;=</span> win_y_low) <span class="op">&amp;</span> (nonzeroy <span class="op">&lt;=</span> win_y_high)</span>
+<span id="cb9-136"><a href="#cb9-136" aria-hidden="true" tabindex="-1"></a>                         <span class="op">&amp;</span> (nonzerox <span class="op">&gt;=</span> win_xright_low) <span class="op">&amp;</span> (nonzerox <span class="op">&lt;=</span> win_xright_high)).nonzero()[<span class="dv">0</span>]</span>
+<span id="cb9-137"><a href="#cb9-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a>        left_lane_inds.append(good_left_inds)</span>
+<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a>        right_lane_inds.append(good_right_inds)</span>
+<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(good_left_inds) <span class="op">&gt;</span>  minpix:</span>
+<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a>            leftx_current <span class="op">=</span> <span class="bu">int</span>(np.mean(nonzerox[good_left_inds]))</span>
+<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(good_right_inds) <span class="op">&gt;</span> minpix:</span>
+<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a>            rightx_current <span class="op">=</span> <span class="bu">int</span>(np.mean(nonzerox[good_right_inds]))</span>
+<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a>    left_lane_inds <span class="op">=</span> np.concatenate(left_lane_inds)</span>
+<span id="cb9-148"><a href="#cb9-148" aria-hidden="true" tabindex="-1"></a>    right_lane_inds <span class="op">=</span> np.concatenate(right_lane_inds)</span>
+<span id="cb9-149"><a href="#cb9-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a>    leftx <span class="op">=</span> nonzerox[left_lane_inds]</span>
+<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a>    lefty <span class="op">=</span> nonzeroy[left_lane_inds]</span>
+<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a>    rightx <span class="op">=</span> nonzerox[right_lane_inds]</span>
+<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a>    righty <span class="op">=</span> nonzeroy[right_lane_inds]</span>
+<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a>    left_fit, right_fit <span class="op">=</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(leftx) <span class="op">&gt;=</span> min_lane_pts <span class="kw">and</span> <span class="bu">len</span>(rightx) <span class="op">&gt;=</span> min_lane_pts:</span>
+<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a>        left_fit <span class="op">=</span> np.polyfit(lefty, leftx, <span class="dv">2</span>)</span>
+<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a>        right_fit <span class="op">=</span> np.polyfit(righty, rightx, <span class="dv">2</span>)</span>
+<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a>    valid <span class="op">=</span> check_validity(left_fit, right_fit, diagnostics<span class="op">=</span>diagnostics)</span>
+<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> valid:</span>
+<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(cache) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> diagnostics: <span class="bu">print</span>(<span class="st">&#39;WARNING: Unable to detect lane lines in this frame.&#39;</span>)</span>
+<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span>, np.array([]), np.array([])</span>
+<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a>        avg_params <span class="op">=</span> np.mean(cache, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a>        left_fit, right_fit <span class="op">=</span> avg_params[<span class="dv">0</span>], avg_params[<span class="dv">1</span>]</span>
+<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a>        ret <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a>    plot_xleft, plot_yleft, plot_xright, plot_yright <span class="op">=</span> get_poly_points(left_fit, right_fit)</span>
+<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a>    out[nonzeroy[left_lane_inds], nonzerox[left_lane_inds]] <span class="op">=</span> [<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a>    out[nonzeroy[right_lane_inds], nonzerox[right_lane_inds]] <span class="op">=</span> [<span class="dv">255</span>, <span class="dv">10</span>, <span class="dv">255</span>]</span>
+<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a>    left_poly_pts <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])</span>
+<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a>    right_poly_pts <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xright, plot_yright]))])</span>
+<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a>    cv2.polylines(out, np.int32([left_poly_pts]), isClosed<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>(<span class="dv">200</span>,<span class="dv">255</span>,<span class="dv">155</span>), thickness<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a>    cv2.polylines(out, np.int32([right_poly_pts]), isClosed<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>(<span class="dv">200</span>,<span class="dv">255</span>,<span class="dv">155</span>), thickness<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> visualise:</span>
+<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a>        plot_images([(img, <span class="st">&#39;Original&#39;</span>), (out, <span class="st">&#39;Out&#39;</span>)], figsize<span class="op">=</span>(<span class="dv">30</span>, <span class="dv">40</span>))  </span>
+<span id="cb9-185"><a href="#cb9-185" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ret, out, np.array([left_fit, right_fit])</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#---------------Show how to detect-------------------</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">4</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    cache <span class="op">=</span> np.array([])</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> img_path <span class="kw">in</span> test_img_paths[:]:</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        img, _ <span class="op">=</span> get_image(img_path)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        binary <span class="op">=</span> BinaryImage(img, visualise<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        polyfit_sliding_window(binary, visualise<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------Adaptive search --------------------------</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> polyfit_adapt_search(img, prev_poly_param, visualise<span class="op">=</span><span class="va">False</span>, diagnostics<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> cache </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> attempts</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span>(<span class="bu">len</span>(img.shape) <span class="op">==</span> <span class="dv">3</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    nb_windows <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    bin_margin <span class="op">=</span> <span class="dv">80</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    margin <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    window_height <span class="op">=</span> <span class="bu">int</span>(img.shape[<span class="dv">0</span>] <span class="op">/</span> nb_windows)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    smoothing_window <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    min_lane_pts <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    binary <span class="op">=</span> np.zeros_like(img[:,:,<span class="dv">0</span>]) </span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    img_plot <span class="op">=</span> np.copy(img)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    left_fit, right_fit <span class="op">=</span> prev_poly_param[<span class="dv">0</span>], prev_poly_param[<span class="dv">1</span>]</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    plot_xleft, plot_yleft, plot_xright, plot_yright <span class="op">=</span> get_poly_points(left_fit, right_fit)</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    leftx_current <span class="op">=</span> np.<span class="bu">int</span>(plot_xleft[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    rightx_current <span class="op">=</span> np.<span class="bu">int</span>(plot_xright[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> window <span class="kw">in</span> <span class="bu">range</span>(nb_windows):</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>        win_y_low <span class="op">=</span> IMG_SHAPE[<span class="dv">0</span>] <span class="op">-</span> (window <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> window_height</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>        win_y_high <span class="op">=</span> IMG_SHAPE[<span class="dv">0</span>] <span class="op">-</span> window <span class="op">*</span> window_height</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>        win_xleft_low <span class="op">=</span> <span class="bu">min</span>(<span class="bu">max</span>(<span class="dv">0</span>, leftx_current <span class="op">-</span> bin_margin), <span class="dv">1280</span>)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>        win_xleft_high <span class="op">=</span> <span class="bu">min</span>(<span class="bu">max</span>(<span class="dv">0</span>, leftx_current <span class="op">+</span> bin_margin), <span class="dv">1280</span>)</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>        win_xright_low <span class="op">=</span> <span class="bu">min</span>(<span class="bu">max</span>(<span class="dv">0</span>, rightx_current <span class="op">-</span> bin_margin), <span class="dv">1280</span>)</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>        win_xright_high <span class="op">=</span> <span class="bu">min</span>(<span class="bu">max</span>(<span class="dv">0</span>, rightx_current <span class="op">+</span> bin_margin), <span class="dv">1280</span>)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>        img_win_left <span class="op">=</span> img[win_y_low:win_y_high, win_xleft_low:win_xleft_high,:]</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>        binary[win_y_low:win_y_high, win_xleft_low:win_xleft_high] <span class="op">=</span> <span class="op">\</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>            BinaryImage(img_win_left, visualise<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>        img_win_right <span class="op">=</span> img[win_y_low:win_y_high, win_xright_low:win_xright_high, :]</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>        binary[win_y_low:win_y_high, win_xright_low:win_xright_high] <span class="op">=</span> <span class="op">\</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>            BinaryImage(img_win_right, visualise<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>        idxs <span class="op">=</span> np.where(plot_yleft <span class="op">==</span> win_y_low)[<span class="dv">0</span>]</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(idxs) <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>            leftx_current <span class="op">=</span> <span class="bu">int</span>(plot_xleft[idxs[<span class="dv">0</span>]])</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>        idxs <span class="op">=</span> np.where(plot_yright <span class="op">==</span> win_y_low)[<span class="dv">0</span>]</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(idxs) <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>            rightx_current <span class="op">=</span> <span class="bu">int</span>(plot_xright[idxs[<span class="dv">0</span>]])</span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> visualise:</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>            left_pts <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>            right_pts <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xright, plot_yright]))])</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>            cv2.polylines(img_plot, np.int32([left_pts]), isClosed<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>(<span class="dv">255</span>, <span class="dv">20</span>, <span class="dv">147</span>), thickness<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>            cv2.polylines(img_plot, np.int32([right_pts]), isClosed<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>(<span class="dv">255</span>, <span class="dv">20</span>, <span class="dv">147</span>), thickness<span class="op">=</span><span class="dv">4</span>)    </span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>            bin_win_left <span class="op">=</span> binary[win_y_low:win_y_high, win_xleft_low:win_xleft_high]</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>            bin_win_left <span class="op">=</span> np.dstack((bin_win_left, np.zeros_like(bin_win_left), np.zeros_like(bin_win_left))) <span class="op">*</span> <span class="dv">255</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>            bin_win_right <span class="op">=</span> binary[win_y_low:win_y_high, win_xright_low:win_xright_high]</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>            bin_win_right <span class="op">=</span> np.dstack([np.zeros_like(bin_win_right), np.zeros_like(bin_win_right), bin_win_right]) <span class="op">*</span> <span class="dv">255</span></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>            win_left <span class="op">=</span> cv2.addWeighted(bin_win_left, <span class="fl">0.5</span>, img_win_left, <span class="fl">0.7</span>, <span class="dv">0</span>)</span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>            win_right <span class="op">=</span> cv2.addWeighted(bin_win_right, <span class="fl">0.5</span>, img_win_right, <span class="fl">0.7</span>, <span class="dv">0</span>)</span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>            cv2.rectangle(img_plot, (win_xleft_low,win_y_low), (win_xleft_high,win_y_high), (<span class="dv">0</span>,<span class="dv">255</span>,<span class="dv">0</span>), <span class="dv">5</span>)</span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>            cv2.rectangle(img_plot, (win_xright_low,win_y_low), (win_xright_high,win_y_high), (<span class="dv">0</span>,<span class="dv">255</span>,<span class="dv">0</span>), <span class="dv">5</span>)</span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>            f, _ <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">13</span>,<span class="dv">5</span>))</span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a>            plt.subplot(<span class="dv">121</span>)</span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a>            plt.axis(<span class="st">&#39;off&#39;</span>)</span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>            plt.imshow(binary, cmap<span class="op">=</span><span class="st">&#39;gray&#39;</span>)</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a>            plt.subplot(<span class="dv">122</span>)</span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a>            plt.axis(<span class="st">&#39;off&#39;</span>)</span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>            plt.imshow(img_plot)</span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>            plt.subplots_adjust(top<span class="op">=</span><span class="fl">0.98</span>, bottom<span class="op">=</span><span class="fl">0.0</span>, left<span class="op">=</span><span class="fl">0.0</span>, right<span class="op">=</span><span class="fl">1.0</span>, hspace<span class="op">=</span><span class="fl">0.1</span>, wspace<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a>            img_plot[win_y_low:win_y_high, win_xleft_low:win_xleft_high] <span class="op">=</span> win_left</span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a>            img_plot[win_y_low:win_y_high, win_xright_low:win_xright_high] <span class="op">=</span> win_right</span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>    nonzero <span class="op">=</span> binary.nonzero()</span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>    nonzeroy <span class="op">=</span> np.array(nonzero[<span class="dv">0</span>])</span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a>    nonzerox <span class="op">=</span> np.array(nonzero[<span class="dv">1</span>])</span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>    left_lane_inds <span class="op">=</span> <span class="op">\</span></span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>        ((nonzerox <span class="op">&gt;</span> (left_fit[<span class="dv">0</span>]<span class="op">*</span>(nonzeroy<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> left_fit[<span class="dv">1</span>]<span class="op">*</span>nonzeroy <span class="op">+</span> left_fit[<span class="dv">2</span>] <span class="op">-</span> margin)) <span class="op">&amp;</span></span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a>        (nonzerox <span class="op">&lt;</span> (left_fit[<span class="dv">0</span>]<span class="op">*</span>(nonzeroy<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> left_fit[<span class="dv">1</span>]<span class="op">*</span>nonzeroy <span class="op">+</span> left_fit[<span class="dv">2</span>] <span class="op">+</span> margin))) </span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a>    right_lane_inds <span class="op">=</span> <span class="op">\</span></span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a>        ((nonzerox <span class="op">&gt;</span> (right_fit[<span class="dv">0</span>]<span class="op">*</span>(nonzeroy<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> right_fit[<span class="dv">1</span>]<span class="op">*</span>nonzeroy <span class="op">+</span> right_fit[<span class="dv">2</span>] <span class="op">-</span> margin)) <span class="op">&amp;</span></span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a>         (nonzerox <span class="op">&lt;</span> (right_fit[<span class="dv">0</span>]<span class="op">*</span>(nonzeroy<span class="op">**</span><span class="dv">2</span>) <span class="op">+</span> right_fit[<span class="dv">1</span>]<span class="op">*</span>nonzeroy <span class="op">+</span> right_fit[<span class="dv">2</span>] <span class="op">+</span> margin)))  </span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a>    leftx <span class="op">=</span> nonzerox[left_lane_inds]</span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>    lefty <span class="op">=</span> nonzeroy[left_lane_inds]</span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a>    rightx <span class="op">=</span> nonzerox[right_lane_inds]</span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a>    righty <span class="op">=</span> nonzeroy[right_lane_inds]</span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(leftx) <span class="op">&gt;</span> min_lane_pts:</span>
+<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a>        left_fit <span class="op">=</span> np.polyfit(lefty, leftx, <span class="dv">2</span>)</span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> diagnostics: <span class="bu">print</span>(<span class="st">&#39;WARNING: Less than </span><span class="sc">{}</span><span class="st"> pts detected for the left lane. </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(min_lane_pts, <span class="bu">len</span>(leftx)))</span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(rightx) <span class="op">&gt;</span> min_lane_pts:</span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a>        right_fit <span class="op">=</span> np.polyfit(righty, rightx, <span class="dv">2</span>)</span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> diagnostics: <span class="bu">print</span>(<span class="st">&#39;WARNING: Less than </span><span class="sc">{}</span><span class="st"> pts detected for the right lane. </span><span class="sc">{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(min_lane_pts, <span class="bu">len</span>(rightx)))</span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a>    valid <span class="op">=</span> check_validity(left_fit, right_fit, diagnostics<span class="op">=</span>diagnostics)</span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> valid:</span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(cache) <span class="op">&lt;</span> smoothing_window:</span>
+<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a>            cache <span class="op">=</span> np.concatenate((cache, [np.array([left_fit, right_fit])]), axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> <span class="bu">len</span>(cache) <span class="op">&gt;=</span> smoothing_window:</span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a>            cache[:<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> cache[<span class="dv">1</span>:]</span>
+<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a>            cache[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> np.array([left_fit, right_fit])</span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a>        avg_params <span class="op">=</span> np.mean(cache, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a>        left_fit, right_fit <span class="op">=</span> avg_params[<span class="dv">0</span>], avg_params[<span class="dv">1</span>]</span>
+<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>        plot_xleft, plot_yleft, plot_xright, plot_yright <span class="op">=</span> get_poly_points(left_fit, right_fit)</span>
+<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>        curr_poly_param <span class="op">=</span> np.array([left_fit, right_fit])</span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a>        attempts <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a>        curr_poly_param <span class="op">=</span> prev_poly_param</span>
+<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> np.dstack([binary, binary, binary]) <span class="op">*</span> <span class="dv">255</span></span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a>    win_img <span class="op">=</span> np.zeros_like(out)</span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a>    out[lefty, leftx] <span class="op">=</span> [<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a>    out[righty, rightx] <span class="op">=</span> [<span class="dv">255</span>, <span class="dv">10</span>, <span class="dv">255</span>]</span>
+<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a>    left_window1 <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xleft <span class="op">-</span> margin, plot_yleft]))])</span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a>    left_window2 <span class="op">=</span> np.array([np.flipud(np.transpose(np.vstack([plot_xleft <span class="op">+</span> margin, plot_yleft])))])</span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a>    left_pts <span class="op">=</span> np.hstack([left_window1, left_window2])</span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a>    right_window1 <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xright <span class="op">-</span> margin, plot_yright]))])</span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>    right_window2 <span class="op">=</span> np.array([np.flipud(np.transpose(np.vstack([plot_xright <span class="op">+</span> margin, plot_yright])))])</span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a>    right_pts <span class="op">=</span> np.hstack([right_window1, right_window2])</span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>    cv2.fillPoly(win_img, np.int_([left_pts]), (<span class="dv">0</span>, <span class="dv">255</span>, <span class="dv">0</span>))</span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a>    cv2.fillPoly(win_img, np.int_([right_pts]), (<span class="dv">0</span>, <span class="dv">255</span>, <span class="dv">0</span>))</span>
+<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> cv2.addWeighted(out, <span class="dv">1</span>, win_img, <span class="fl">0.25</span>, <span class="dv">0</span>)</span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a>    left_poly_pts <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])</span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>    right_poly_pts <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xright, plot_yright]))])</span>
+<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a>    cv2.polylines(out, np.int32([left_poly_pts]), isClosed<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>(<span class="dv">200</span>,<span class="dv">255</span>,<span class="dv">155</span>), thickness<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a>    cv2.polylines(out, np.int32([right_poly_pts]), isClosed<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>(<span class="dv">200</span>,<span class="dv">255</span>,<span class="dv">155</span>), thickness<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out, curr_poly_param</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------Adaptive Search Op-----------------</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">5</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    cache <span class="op">=</span> np.array([])</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    attempts <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    max_attempts <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    reset <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">%</span>matplotlib inline</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> frame_path <span class="kw">in</span> test_img_paths:</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>        img <span class="op">=</span> mpimg.imread(frame_path)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        warped, (M, invM) <span class="op">=</span> get_image(frame_path)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> reset <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>            binary <span class="op">=</span> BinaryImage(warped)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>            ret, out, poly_param <span class="op">=</span> polyfit_sliding_window(binary, visualise<span class="op">=</span><span class="va">False</span>, diagnostics<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> ret:</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>                reset <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>                cache <span class="op">=</span> np.array([poly_param])</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>            out, poly_param <span class="op">=</span> polyfit_adapt_search(warped, poly_param, visualise<span class="op">=</span><span class="va">False</span>, diagnostics<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> attempts <span class="op">==</span> max_attempts:</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>                attempts <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>                reset <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>            out_unwarped <span class="op">=</span> cv2.warpPerspective(out, invM, (IMG_SHAPE[<span class="dv">1</span>], IMG_SHAPE[<span class="dv">0</span>]), flags<span class="op">=</span>cv2.INTER_LINEAR)</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>            img_overlay <span class="op">=</span> np.copy(img)</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>            img_overlay <span class="op">=</span> cv2.addWeighted(out_unwarped, <span class="fl">0.5</span>, img, <span class="fl">0.5</span>, <span class="dv">0</span>)</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>            plot_images([(warped, <span class="st">&#39;Original&#39;</span>), (out, <span class="st">&#39;Out&#39;</span>), (img_overlay, <span class="st">&#39;Overlay&#39;</span>)], figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">18</span>))</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------Pixels to Meters-------------------</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_mppx(img, dashed_line_loc, visualise<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    lane_width <span class="op">=</span> <span class="fl">3.7</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    dashed_line_len <span class="op">=</span> <span class="fl">3.048</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> dashed_line_loc <span class="op">==</span> <span class="st">&#39;left&#39;</span>:</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        y_top <span class="op">=</span> <span class="dv">295</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        y_bottom <span class="op">=</span> <span class="dv">405</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> dashed_line_loc <span class="op">==</span> <span class="st">&#39;right&#39;</span>:</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        y_top <span class="op">=</span> <span class="dv">395</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        y_bottom <span class="op">=</span> <span class="dv">495</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    binary <span class="op">=</span> BinaryImage(img)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    histogram <span class="op">=</span> np.<span class="bu">sum</span>(binary[<span class="bu">int</span>(binary.shape[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">2</span>):, :], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    midpoint <span class="op">=</span> np.<span class="bu">int</span>(histogram.shape[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    x_left <span class="op">=</span> np.argmax(histogram[:midpoint])</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    x_right <span class="op">=</span> np.argmax(histogram[midpoint:]) <span class="op">+</span> midpoint</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    x_mppx <span class="op">=</span> lane_width <span class="op">/</span> (x_right <span class="op">-</span> x_left)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    y_mppx <span class="op">=</span> dashed_line_len <span class="op">/</span> (y_bottom <span class="op">-</span> y_top)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> visualise:</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>        plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>        plt.imshow(img)</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>        plt.axis(<span class="st">&#39;off&#39;</span>)</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> dashed_line_loc <span class="op">==</span> <span class="st">&#39;left&#39;</span>:</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>            plt.plot((x_left, x_left), (y_top, y_bottom), <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>            plt.text(x_left <span class="op">+</span> <span class="dv">10</span>, (y_top <span class="op">+</span> y_bottom) <span class="op">//</span> <span class="dv">2</span>, <span class="st">&#39;</span><span class="sc">{}</span><span class="st"> m&#39;</span>.<span class="bu">format</span>(dashed_line_len), color<span class="op">=</span><span class="st">&#39;r&#39;</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> dashed_line_loc <span class="op">==</span> <span class="st">&#39;right&#39;</span>:</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>            plt.plot((x_right, x_right), (y_top, y_bottom), <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>            plt.text(x_right <span class="op">+</span> <span class="dv">10</span>, (y_top <span class="op">+</span> y_bottom) <span class="op">//</span> <span class="dv">2</span>, <span class="st">&#39;</span><span class="sc">{}</span><span class="st"> m&#39;</span>.<span class="bu">format</span>(dashed_line_len), color<span class="op">=</span><span class="st">&#39;r&#39;</span>,fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>        plt.plot((x_left, x_right), (img.shape[<span class="dv">0</span>] <span class="op">-</span> <span class="dv">200</span> , img.shape[<span class="dv">0</span>] <span class="op">-</span> <span class="dv">200</span>), <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>        plt.text((x_left <span class="op">+</span> x_right) <span class="op">//</span> <span class="dv">2</span>, img.shape[<span class="dv">0</span>] <span class="op">-</span> <span class="dv">220</span>, <span class="st">&#39;</span><span class="sc">{}</span><span class="st"> m&#39;</span>.<span class="bu">format</span>(lane_width), color<span class="op">=</span><span class="st">&#39;r&#39;</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y_mppx, x_mppx</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------Determine avg meters--------------</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">6</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    visualise <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    visualise <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>img, _ <span class="op">=</span> get_image(test_img_paths[<span class="dv">0</span>])</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>y_mppx1, x_mppx1 <span class="op">=</span> compute_mppx(img, dashed_line_loc<span class="op">=</span><span class="st">&#39;right&#39;</span>, visualise<span class="op">=</span>visualise)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>img, _ <span class="op">=</span> get_image(test_img_paths[<span class="dv">1</span>])</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>y_mppx2, x_mppx2 <span class="op">=</span> compute_mppx(img, dashed_line_loc<span class="op">=</span><span class="st">&#39;left&#39;</span>, visualise<span class="op">=</span>visualise)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>x_mppx <span class="op">=</span> (x_mppx1 <span class="op">+</span> x_mppx2) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>y_mppx <span class="op">=</span> (y_mppx1 <span class="op">+</span> y_mppx2) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;The avgerage meter/px (x-axis): </span><span class="sc">{:.4f}</span><span class="st">&#39;</span>.<span class="bu">format</span>(x_mppx))</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;The avgerage meter/px (y-axis): </span><span class="sc">{:.4f}</span><span class="st">&#39;</span>.<span class="bu">format</span>(y_mppx))</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------Curvature---------------</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_offset_from_center(poly_param, x_mppx):</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    plot_xleft, plot_yleft, plot_xright, plot_yright <span class="op">=</span> get_poly_points(poly_param[<span class="dv">0</span>], poly_param[<span class="dv">1</span>])</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    lane_center <span class="op">=</span> (plot_xright[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> plot_xleft[<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    car_center <span class="op">=</span> IMG_SHAPE[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    offset <span class="op">=</span> (lane_center <span class="op">-</span> car_center) <span class="op">*</span> x_mppx</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> offset</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_curvature(poly_param, y_mppx, x_mppx):</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    plot_xleft, plot_yleft, plot_xright, plot_yright <span class="op">=</span> get_poly_points(poly_param[<span class="dv">0</span>], poly_param[<span class="dv">1</span>])</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    y_eval <span class="op">=</span> np.<span class="bu">max</span>(plot_yleft)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    left_fit_cr <span class="op">=</span> np.polyfit(plot_yleft <span class="op">*</span> y_mppx, plot_xleft <span class="op">*</span> x_mppx, <span class="dv">2</span>)</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    right_fit_cr <span class="op">=</span> np.polyfit(plot_yright <span class="op">*</span> y_mppx, plot_xright <span class="op">*</span> x_mppx, <span class="dv">2</span>)</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    left_curverad <span class="op">=</span> ((<span class="dv">1</span> <span class="op">+</span> (<span class="dv">2</span><span class="op">*</span>left_fit_cr[<span class="dv">0</span>]<span class="op">*</span> y_eval<span class="op">*</span>y_mppx <span class="op">+</span> left_fit_cr[<span class="dv">1</span>])<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span><span class="fl">1.5</span>) <span class="op">/</span> np.absolute(<span class="dv">2</span><span class="op">*</span>left_fit_cr[<span class="dv">0</span>])</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    right_curverad <span class="op">=</span> ((<span class="dv">1</span> <span class="op">+</span> (<span class="dv">2</span><span class="op">*</span>right_fit_cr[<span class="dv">0</span>]<span class="op">*</span>y_eval<span class="op">*</span>y_mppx <span class="op">+</span> right_fit_cr[<span class="dv">1</span>])<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span><span class="fl">1.5</span>) <span class="op">/</span> np.absolute(<span class="dv">2</span><span class="op">*</span>right_fit_cr[<span class="dv">0</span>])</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> left_curverad, right_curverad</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw(img, warped, invM, poly_param, curve_rad, offset):</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    undist <span class="op">=</span> undistort(img, mtx, dist)</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    warp_zero <span class="op">=</span> np.zeros_like(warped[:,:,<span class="dv">0</span>]).astype(np.uint8)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    color_warp <span class="op">=</span> np.dstack((warp_zero, warp_zero, warp_zero))</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    left_fit <span class="op">=</span> poly_param[<span class="dv">0</span>]</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    right_fit <span class="op">=</span> poly_param[<span class="dv">1</span>]</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    plot_xleft, plot_yleft, plot_xright, plot_yright <span class="op">=</span> get_poly_points(left_fit, right_fit)</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    pts_left <span class="op">=</span> np.array([np.transpose(np.vstack([plot_xleft, plot_yleft]))])</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>    pts_right <span class="op">=</span> np.array([np.flipud(np.transpose(np.vstack([plot_xright, plot_yright])))])</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    pts <span class="op">=</span> np.hstack((pts_left, pts_right))</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    cv2.fillPoly(color_warp, np.int_([pts]), (<span class="dv">0</span>, <span class="dv">220</span>, <span class="dv">110</span>))</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    cv2.polylines(color_warp, np.int32([pts_left]), isClosed<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>                  color<span class="op">=</span>(<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">255</span>), thickness<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    cv2.polylines(color_warp, np.int32([pts_right]), isClosed<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>                  color<span class="op">=</span>(<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">255</span>), thickness<span class="op">=</span> <span class="dv">10</span>)</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>    unwarped <span class="op">=</span> cv2.warpPerspective(color_warp, invM, (img.shape[<span class="dv">1</span>], img.shape[<span class="dv">0</span>]), flags<span class="op">=</span>cv2.INTER_LINEAR)</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> cv2.addWeighted(undist, <span class="dv">1</span>, unwarped, <span class="fl">0.4</span>, <span class="dv">0</span>)</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (left_fit[<span class="dv">1</span>] <span class="op">+</span> right_fit[<span class="dv">1</span>]) <span class="op">/</span> <span class="dv">2</span> <span class="op">&gt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> <span class="st">&#39;Left turn with Curve Radius: </span><span class="sc">{:04.2f}</span><span class="st">m&#39;</span>.<span class="bu">format</span>(curve_rad)</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> (left_fit[<span class="dv">1</span>] <span class="op">+</span> right_fit[<span class="dv">1</span>]) <span class="op">/</span> <span class="dv">2</span> <span class="op">&lt;</span> <span class="op">-</span><span class="fl">0.05</span>:</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> <span class="st">&#39;Right turn with Curve Radius: </span><span class="sc">{:04.2f}</span><span class="st">m&#39;</span>.<span class="bu">format</span>(curve_rad)</span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> <span class="st">&#39;Straight Way&#39;</span></span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>    cv2.putText(out, text, (<span class="dv">50</span>, <span class="dv">60</span>), cv2.FONT_HERSHEY_DUPLEX, <span class="fl">1.2</span>, (<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">255</span>), <span class="dv">2</span>, cv2.LINE_AA)</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>    direction <span class="op">=</span> <span class="st">&#39;&#39;</span></span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> offset <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>        direction <span class="op">=</span> <span class="st">&#39;left&#39;</span></span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> offset <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>        direction <span class="op">=</span> <span class="st">&#39;right&#39;</span></span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="st">&#39;</span><span class="sc">{:0.1f}</span><span class="st">cm </span><span class="sc">{}</span><span class="st"> from center&#39;</span>.<span class="bu">format</span>(<span class="bu">abs</span>(offset) <span class="op">*</span> <span class="dv">100</span>, direction)</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>    cv2.putText(out, text, (<span class="dv">50</span>, <span class="dv">110</span>), cv2.FONT_HERSHEY_DUPLEX, <span class="fl">1.2</span>, (<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">255</span>), <span class="dv">2</span>, cv2.LINE_AA)</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#---------Curvature computation op--------------</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">7</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    cache <span class="op">=</span> np.array([])</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">%</span>matplotlib inline</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> img_path <span class="kw">in</span> test_img_paths[<span class="dv">3</span>:<span class="dv">6</span>]:</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        img <span class="op">=</span> mpimg.imread(img_path)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        warped, (M, invM) <span class="op">=</span> get_image(img_path)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        binary <span class="op">=</span> BinaryImage(warped)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        ret, img_poly, poly_param <span class="op">=</span> polyfit_sliding_window(binary)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>        left_curverad, right_curverad <span class="op">=</span> compute_curvature(poly_param, y_mppx, x_mppx)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>        curvature <span class="op">=</span> (left_curverad <span class="op">+</span> right_curverad) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>        offset <span class="op">=</span> compute_offset_from_center(poly_param, x_mppx)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> draw(img, warped, invM, poly_param, curvature, offset)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>        plot_images([(img_poly, <span class="st">&#39;Polyfit&#39;</span>), (result, <span class="st">&#39;Result&#39;</span>)])</span></code></pre></div>
+</div>
+<div class="cell code" data-collapsed="true">
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#---------------- Pipeline-----------------</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pipeline(img,mode,visualise<span class="op">=</span><span class="va">False</span>, diagnostics<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> cache</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> poly_param </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> attempts</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> reset</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    max_attempts <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> np.copy(img)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    warped, (M, invM) <span class="op">=</span> preprocess_image(img)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> reset <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>            binary <span class="op">=</span> BinaryImage(warped)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>            ret, img_poly, poly_param <span class="op">=</span> polyfit_sliding_window(binary, diagnostics<span class="op">=</span>diagnostics)</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> ret:</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>                reset <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>                cache <span class="op">=</span> np.array([poly_param])</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="bu">len</span>(img_poly) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="st">&#39;Sliding window failed!&#39;</span>)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">return</span> img</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>            img_poly, poly_param <span class="op">=</span> polyfit_adapt_search(warped, poly_param, diagnostics<span class="op">=</span>diagnostics)</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> attempts <span class="op">==</span> max_attempts:</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> diagnostics: <span class="bu">print</span>(<span class="st">&#39;Resetting...&#39;</span>)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>                reset <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>                attempts <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>        left_curverad, right_curverad <span class="op">=</span> compute_curvature(poly_param, y_mppx, x_mppx)</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>        offset <span class="op">=</span> compute_offset_from_center(poly_param, x_mppx)</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> draw(img, warped, invM, poly_param, (left_curverad <span class="op">+</span> right_curverad) <span class="op">/</span> <span class="dv">2</span>, offset)</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>        blended_warped_poly <span class="op">=</span> cv2.addWeighted(img_poly, <span class="fl">0.6</span>, warped, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>        ret2 <span class="op">=</span> np.hstack([img_poly, blended_warped_poly])</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>        ret3 <span class="op">=</span> np.hstack([result, warped])</span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>        ret3 <span class="op">=</span> np.vstack([ret3, ret2])</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> visualise:</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> mode<span class="op">==</span><span class="st">&#39;debug&#39;</span>: <span class="co">#for debug</span></span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>                plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">12</span>))</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>                plt.imshow(ret3)</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>            <span class="cf">elif</span> mode<span class="op">==</span><span class="st">&#39;run&#39;</span>: <span class="co">#for run</span></span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>                ret3 <span class="op">=</span> result</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>                plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">12</span>))</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>                plt.imshow(ret3)</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> ret3</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(e)</span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> img</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="false">
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------Demo of pipeline---------------</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">8</span> <span class="kw">in</span> plot_demo:</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    cache <span class="op">=</span> np.array([])</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    attempts <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    reset <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> pipeline(mpimg.imread(test_img_paths[<span class="dv">4</span>]),<span class="st">&#39;debug&#39;</span>, visualise<span class="op">=</span><span class="va">True</span>, diagnostics<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> pipeline(mpimg.imread(test_img_paths[<span class="dv">4</span>]),<span class="st">&#39;run&#39;</span>, visualise<span class="op">=</span><span class="va">True</span>, diagnostics<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-scrolled="true">
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------Making Output Video--------------------</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>video_input <span class="op">=</span> VideoFileClip(sys.argv[<span class="dv">1</span>])          </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>video_output <span class="op">=</span> sys.argv[<span class="dv">2</span>]       </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>process_frame <span class="op">=</span> <span class="kw">lambda</span> frame: pipeline(frame,sys.argv[<span class="dv">3</span>], visualise<span class="op">=</span><span class="va">True</span>, diagnostics<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>cache <span class="op">=</span> np.array([])</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>attempts <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>reset <span class="op">=</span> <span class="va">True</span>   </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>processed_video <span class="op">=</span> video_input.fl_image(process_frame)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>time processed_video.write_videofile(video_output, audio<span class="op">=</span><span class="va">False</span>)</span></code></pre></div>
+</div>
+</body>
+</html>
