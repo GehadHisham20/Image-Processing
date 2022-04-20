@@ -497,3 +497,12 @@ def polyfit_sliding_window(binary, lane_width_px=578, visualise=False, diagnosti
     if visualise:
         plot_images([(img, 'Original'), (out, 'Out')], figsize=(30, 40))  
     return ret, out, np.array([left_fit, right_fit])
+    #---------------Show how to detect-------------------
+    if 4 in plot_demo:
+
+    cache = np.array([])
+
+    for img_path in test_img_paths[:]:
+        img, _ = get_image(img_path)
+        binary = BinaryImage(img, visualise=False)
+        polyfit_sliding_window(binary, visualise=True)
